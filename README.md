@@ -26,3 +26,5 @@ Online Book Store (E-commerce) - 6th semester project
 >  - [x] Formspree : 3rd party application.
 >  - [x] JSON (JavaScript Object Notation).
 >  - [x] Font Awesome.
+-----
+> **_NOTE:_**  To test the contact form please send me a message using any contact info provided [Here](https://www.google.com) in the footer (DEMO).
