@@ -1,6 +1,6 @@
 # Pick-Book
 Online Book Store (E-commerce) - 6th semester project
-# You can view the project deployment from [Here](https://www.google.com) (Demo)
+# You can view the project deployment from [Here](https://ali-hsaino.github.io/Pick-Book/) (Demo)
 > Features : 
 >  1. Full responsive web design, it is suitable for all screen sizes.
 >  2. Good UI with eye-friendly colors.
@@ -27,4 +27,4 @@ Online Book Store (E-commerce) - 6th semester project
 >  - [x] JSON (JavaScript Object Notation).
 >  - [x] Font Awesome.
 -----
-> **_NOTE:_**  To test the contact form please send me a message using any contact info provided [Here](https://www.google.com) in the footer (DEMO).
+> **_NOTE:_**  To test the contact form please send me a message using any contact info provided [Here](https://ali-hsaino.github.io/Pick-Book/) in the footer (DEMO).
