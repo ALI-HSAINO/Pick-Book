@@ -216,7 +216,7 @@ footer {
   height: 7px;
   top: 50%;
   transform: translateY(-50%);
-  right: 70px;
+  right: 60px;
   border-radius: 50px;
   background-color: white;
 }
@@ -236,11 +236,14 @@ footer {
   color: #8a3ab9;
 }
 .footer .icons a:nth-child(5) {
+  color: #4267b2;
+}
+.footer .icons a:nth-child(6) {
   font-size: 20px;
   color: white;
   transition: var(--transition);
 }
-.footer .icons a:nth-child(5):hover {
+.footer .icons a:nth-child(6):hover {
   color: var(--main-color);
 }
 .footer .love {
