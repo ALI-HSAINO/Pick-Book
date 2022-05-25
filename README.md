@@ -27,4 +27,4 @@ Online Book Store (E-commerce) - 6th semester project
 >  - [x] JSON (JavaScript Object Notation).
 >  - [x] Font Awesome.
 -----
-> **_NOTE:_**  To test the contact form please send me a message using any contact info provided [Here](https://ali-hsaino.github.io/Pick-Book/) in the footer (DEMO).
+> **_NOTE:_**  To test the contact form please send me a message using any contact info provided [Here](https://ali-hsaino.github.io/Pick-Book/#footer) (DEMO).
