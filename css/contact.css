@@ -1,0 +1,355 @@
+/* ? Start Global Rules */
+:root {
+  --main-color: #0099ff;
+  --main-color-alt: #005792;
+  --main-color-high-contrast: #008ae6;
+  --main-margin: 30px;
+  --main-padding: 10px;
+  --transition: 0.3s;
+}
+* {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+body {
+  font-family: "Lato", sans-serif;
+}
+html {
+  scroll-behavior: smooth;
+}
+.container {
+  padding: 0px var(--main-padding);
+  margin: 0px auto;
+}
+@media (min-width: 768px) {
+  .container {
+    width: 750px;
+  }
+}
+@media (min-width: 992px) {
+  .container {
+    width: 970px;
+  }
+}
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px;
+  }
+}
+ul {
+  list-style: none;
+  margin: 0px;
+  padding: 0px;
+}
+a {
+  text-decoration: none;
+}
+
+/*? End Global Rules */
+/*? Start Local Rules  */
+h2.title-of-section {
+  color: var(--main-color);
+  border: solid 1px var(--main-color-alt);
+  padding: var(--main-padding) 30px;
+  transition: var(--transition);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  cursor: pointer;
+  font-size: 30px;
+  transition-delay: 0.05s;
+  margin-bottom: 40px;
+  width: 210px;
+}
+h2.title-of-section:hover {
+  background-color: var(--main-color-alt);
+  color: white;
+}
+h2.title-of-section::before {
+  content: "";
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background-color: var(--main-color);
+  border-radius: 50%;
+  top: 50%;
+  right: 240px;
+  transform: translateY(-50%);
+  transition: var(--transition);
+}
+h2.title-of-section::after {
+  content: "";
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background-color: var(--main-color);
+  border-radius: 50%;
+  top: 50%;
+  left: 240px;
+  transform: translateY(-50%);
+  transition: var(--transition);
+}
+h2.title-of-section:hover::after {
+  background-color: var(--main-color-alt);
+  left: 170px;
+  opacity: 0;
+}
+h2.title-of-section:hover::before {
+  background-color: var(--main-color-alt);
+  right: 170px;
+  opacity: 0;
+}
+section.main-section {
+  margin-top: 0px;
+  padding: var(--main-padding);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  min-height: 100vh;
+  background-color: rgb(30, 30, 30);
+  color: white;
+}
+/*? End Local Rules  */
+/*? Start Contact  Us*/
+.contact h2 {
+  font-size: 29px;
+}
+.contact .content {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+.contact .content .in-touch {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  position: relative;
+  padding: 10px;
+}
+.contact .content .in-touch h3 {
+  color: var(--main-color);
+  font-size: 40px;
+  margin: 0px;
+}
+.contact .content .in-touch p {
+  font-size: 30px;
+  color: white;
+}
+.contact .content .in-touch .ways {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+.contact .content .in-touch .ways .way {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+}
+.contact .content .in-touch .ways .way:not(:last-child) {
+  margin-bottom: 20px;
+}
+.contact .content .in-touch .ways .way > span {
+  margin-right: 20px;
+  font-size: 20px;
+  color: rgb(0, 215, 0);
+  filter: drop-shadow(0px 0px 2px rgb(0, 215, 0));
+}
+.contact .content .in-touch .ways .way .options {
+  display: flex;
+  flex-direction: column;
+}
+.contact .formspree {
+  margin-top: 80px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.contact .formspree > a {
+  color: white;
+  font-size: 30px;
+  text-decoration: underline;
+}
+.contact .formspree > a:visited {
+  color: purple;
+}
+.contact .formspree p a {
+  color: white;
+  font-size: 30px;
+  text-decoration: underline;
+}
+.contact .formspree p a:visited {
+  color: purple;
+}
+.contact .content .form {
+  display: flex;
+  flex-direction: column;
+}
+.contact .content .form form {
+  display: flex;
+  flex-direction: column;
+}
+.contact .content .form form div {
+  display: flex;
+  flex-direction: column;
+}
+.contact .content .form form label {
+  color: var(--main-color);
+  margin-bottom: 10px;
+}
+.contact .content .form form input {
+  caret-color: var(--main-color);
+  padding: var(--main-padding);
+  outline: none;
+  background-color: transparent;
+  margin-bottom: 15px;
+  width: 100%;
+  height: 40px;
+  border: 1px solid white;
+  color: white;
+}
+.contact .content .form form textarea {
+  caret-color: var(--main-color);
+  padding: var(--main-padding);
+  outline: none;
+  background-color: transparent;
+  resize: vertical;
+  height: 100px;
+  margin-bottom: 10px;
+  border: 1px solid white;
+  color: white;
+}
+.contact .content .form form button {
+  transition: var(--transition);
+  border: 1px solid var(--main-color);
+  align-self: center;
+  background-color: transparent;
+  cursor: pointer;
+  width: 200px;
+  height: 30px;
+  color: white;
+}
+.contact .content .form form button:hover {
+  background-color: var(--main-color);
+  color: black;
+}
+.contact .content .form .status {
+  transition: var(--transition);
+  align-self: center;
+  padding: 10px;
+  opacity: 1;
+  margin-top: 10px;
+  border-radius: 10px;
+  background-color: #ff4f4f;
+  color: black;
+}
+.contact .content .form .status.done {
+  background-color: #4fff4f;
+  opacity: 1;
+}
+.contact .content .form .status.error {
+  background-color: #ff4f4f;
+  opacity: 1;
+}
+@media (max-width: 768px) {
+  .contact .content {
+    flex-direction: column;
+  }
+  .contact .content .form {
+    margin-top: 30px;
+    align-self: stretch;
+  }
+  .contact .content .form form button {
+    height: 40px;
+    width: auto;
+  }
+}
+.home a {
+  font-size: 30px;
+  color: var(--main-color);
+}
+/*? End Contact  Us*/
+/*? Start Footer  */
+footer {
+  background-color: rgb(30, 30, 30);
+}
+.footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+}
+.footer p:first-child {
+  position: relative;
+  font-size: 20px;
+  font-weight: 600;
+}
+.footer p:first-child::before {
+  position: absolute;
+  content: "";
+  width: 200px;
+  height: 1px;
+  top: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: var(--main-color);
+}
+.footer .icons {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  width: 300px;
+}
+.footer .icons::before {
+  position: absolute;
+  content: "";
+  width: 7px;
+  height: 7px;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 70px;
+  border-radius: 50px;
+  background-color: white;
+}
+.footer .icons a {
+  font-size: 20px;
+}
+.footer .icons a:nth-child(1) {
+  color: white;
+}
+.footer .icons a:nth-child(2) {
+  color: white;
+}
+.footer .icons a:nth-child(3) {
+  color: #0e76a8;
+}
+.footer .icons a:nth-child(4) {
+  color: #8a3ab9;
+}
+.footer .icons a:nth-child(5) {
+  font-size: 20px;
+  color: white;
+  transition: var(--transition);
+}
+.footer .icons a:nth-child(5):hover {
+  color: var(--main-color);
+}
+.footer .love {
+  margin: 5px 0px;
+}
+.footer .love i {
+  color: red;
+}
+/*? End Footer  */

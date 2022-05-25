@@ -1,0 +1,1193 @@
+/* ? Start Global Rules */
+:root {
+  --main-color: #0099ff;
+  --main-color-alt: #005792;
+  --main-color-high-contrast: #008ae6;
+  --main-margin: 30px;
+  --main-padding: 10px;
+  --transition: 0.3s;
+}
+* {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+body {
+  font-family: "Lato", sans-serif;
+}
+html {
+  scroll-behavior: smooth;
+}
+.container {
+  padding: 0px var(--main-padding);
+  margin: 0px auto;
+}
+@media (min-width: 768px) {
+  .container {
+    width: 750px;
+  }
+}
+@media (min-width: 992px) {
+  .container {
+    width: 970px;
+  }
+}
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px;
+  }
+}
+ul {
+  list-style: none;
+  margin: 0px;
+  padding: 0px;
+}
+a {
+  text-decoration: none;
+}
+
+/*? End Global Rules */
+/*? Start Local Rules  */
+h2.title-of-section {
+  color: var(--main-color);
+  border: solid 1px var(--main-color-alt);
+  padding: var(--main-padding) 30px;
+  transition: var(--transition);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  cursor: pointer;
+  font-size: 30px;
+  transition-delay: 0.05s;
+  margin-bottom: 40px;
+  width: 210px;
+}
+h2.title-of-section:hover {
+  background-color: var(--main-color-alt);
+  color: white;
+}
+h2.title-of-section::before {
+  content: "";
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background-color: var(--main-color);
+  border-radius: 50%;
+  top: 50%;
+  right: 240px;
+  transform: translateY(-50%);
+  transition: var(--transition);
+}
+h2.title-of-section::after {
+  content: "";
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background-color: var(--main-color);
+  border-radius: 50%;
+  top: 50%;
+  left: 240px;
+  transform: translateY(-50%);
+  transition: var(--transition);
+}
+h2.title-of-section:hover::after {
+  background-color: var(--main-color-alt);
+  left: 170px;
+  opacity: 0;
+}
+h2.title-of-section:hover::before {
+  background-color: var(--main-color-alt);
+  right: 170px;
+  opacity: 0;
+}
+section.main-section {
+  margin-top: var(--main-margin);
+  padding: var(--main-padding);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+/*? End Local Rules  */
+/*? Start Header */
+header .header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+header .header .logo {
+  color: var(--main-color);
+  padding: var(--main-padding);
+  user-select: none;
+  font-size: 40px;
+  font-weight: 900;
+}
+header .header .logo::first-letter {
+  color: var(--main-color-alt);
+  font-size: 60px;
+}
+header .header > .icon {
+  color: var(--main-color);
+  transition: all var(--transition);
+  padding: var(--main-padding);
+  cursor: pointer;
+  user-select: none;
+  font-size: 40px;
+  font-weight: 900;
+}
+header .menu {
+  position: relative;
+  opacity: 0;
+  transition: var(--transition);
+  z-index: -1;
+}
+header > .show {
+  opacity: 1;
+  z-index: 10;
+  transition: var(--transition);
+}
+header .menu > ul {
+  border: solid 2px var(--main-color-alt);
+  padding: var(--main-padding);
+  position: absolute;
+  overflow: hidden;
+  top: 0;
+  right: 0;
+  width: 250px;
+  border-radius: 20px;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+header .menu > ul > li:not(:last-child) {
+  border-bottom: solid 1px var(--main-color);
+}
+header .menu > ul > li > a {
+  transition: var(--transition);
+  color: white;
+  display: block;
+  padding: 5px;
+  font-size: 20px;
+  user-select: none;
+}
+header .menu > ul > li:last-child > a {
+  position: relative;
+}
+header .menu > ul > li:last-child > a > span {
+  display: flex;
+  position: absolute;
+  opacity: 0;
+  border-radius: 50px;
+  width: 10px;
+  height: 10px;
+  top: 3px;
+  left: 70px;
+  background-color: rgb(255, 87, 87);
+}
+header .menu > ul > li > a:hover {
+  color: var(--main-color);
+}
+header .menu > ul > li:hover::before {
+  left: 0px;
+}
+header .menu > ul > li:hover::after {
+  right: 0px;
+}
+@media (max-width: 992px) and (min-width: 768px) {
+  header .menu ul {
+    width: 450px;
+  }
+  header .menu > ul > li > a {
+    padding: 12px;
+  }
+  header .menu > ul > li:last-child > a > span {
+    top: 9px;
+    left: 76px;
+  }
+}
+@media (max-width: 768px) {
+  header .menu > ul {
+    width: 96%;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  header .menu > ul > li > a {
+    padding: 22px;
+  }
+  header .menu > ul > li:last-child > a > span {
+    top: 19px;
+    left: 85px;
+  }
+}
+/*? End Header */
+/*? Start Landing */
+.landing {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  background-image: url(../imgs/Landing-Section/landing.webp);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  position: relative;
+  top: -90px;
+  height: 100vh;
+  z-index: -2;
+}
+
+.landing::before {
+  position: absolute;
+  content: "";
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+.landing .landing-content {
+  overflow: hidden;
+  position: relative;
+  width: 650px;
+  height: 350px;
+  padding: 20px;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+  background-color: #005892bd;
+}
+
+.landing .landing-content > p {
+  width: 40%;
+  font-size: 30px;
+  font-weight: 800;
+  color: rgb(40, 40, 40);
+  position: relative;
+}
+.landing .landing-content > p::before {
+  content: "George R.R. Martin (American novelist and short-story writer)";
+  position: absolute;
+  bottom: -40px;
+  left: 0;
+  font-size: 13px;
+  line-height: 15px;
+  width: 250px;
+  color: white;
+}
+
+.landing .landing-content > img {
+  width: 400px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  opacity: 0.8;
+}
+@media (max-width: 992px) and (min-width: 768px) {
+  .landing .landing-content {
+    width: 650px;
+    height: 250px;
+  }
+  .landing .landing-content > p {
+    width: 40%;
+    font-size: 26px;
+    line-height: 30px;
+    font-weight: 600;
+    width: 300px;
+  }
+}
+@media (max-width: 768px) {
+  .landing {
+    justify-content: center;
+  }
+  .landing .landing-content {
+    height: fit-content;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .landing .landing-content > p {
+    width: 100%;
+    font-size: 15px;
+    font-weight: 600;
+  }
+  .landing .landing-content > p::before {
+    bottom: -30px;
+    left: 0;
+    font-size: 10px;
+    line-height: 15px;
+    width: 100%;
+    color: white;
+  }
+  .landing .landing-content > img {
+    display: none;
+  }
+}
+/*? End Landing */
+/*? Start Welcome */
+.welcome {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  margin-top: -60px;
+}
+.welcome .welcome-text {
+  width: 50%;
+}
+.welcome .welcome-text > h1 {
+  color: var(--main-color-alt);
+  font-size: 40px;
+  margin: 10px;
+}
+.welcome .welcome-text > p.h3 {
+  color: var(--main-color-high-contrast);
+  font-size: 30px;
+  margin: 10px;
+  font-weight: 600;
+}
+.welcome .welcome-text > p.h3::first-letter {
+  color: var(--main-color-alt);
+  font-size: 50px;
+}
+.welcome .welcome-text > p.p {
+  letter-spacing: 2px;
+  word-spacing: 5px;
+  font-weight: 700;
+  line-height: 30px;
+  padding: var(--main-padding);
+  border-radius: 20px;
+  font-size: 15px;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+.welcome .welcome-text > p.p > span {
+  display: block;
+  font-size: 30px;
+  margin-bottom: 10px;
+  color: rgb(167, 0, 0);
+}
+.welcome .welcome-text > a > button {
+  transition: var(--transition);
+  color: var(--main-color-alt);
+  border: 2px solid var(--main-color);
+  outline: none;
+  display: block;
+  cursor: pointer;
+  width: 200px;
+  height: 50px;
+  font-size: 20px;
+  margin: 0px auto;
+  background-color: white;
+}
+.welcome .welcome-text button:hover {
+  background-color: var(--main-color);
+  color: white;
+}
+.welcome .welcome-img {
+  width: 30%;
+}
+.welcome .welcome-img > img {
+  width: 100%;
+  height: 100%;
+  filter: grayscale(100%);
+  transition: filter var(--transition);
+  border-radius: 20px;
+}
+@media (max-width: 992px) {
+  .welcome .welcome-text {
+    width: 100%;
+  }
+  .welcome .welcome-text > h1 {
+    font-size: 30px;
+  }
+  .welcome .welcome-text > h3 {
+    font-size: 20px;
+  }
+  .welcome .welcome-text > h3::first-letter {
+    font-size: 40px;
+  }
+  .welcome .welcome-img {
+    display: none;
+  }
+  .welcome .welcome-text > p {
+    letter-spacing: 0.5px;
+    word-spacing: 5px;
+    font-weight: 400;
+    padding: var(--main-padding);
+    font-size: 15px;
+  }
+  .welcome .welcome-text > p > span {
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+}
+/*? End Welcome */
+/*? Start Pick Book */
+.pick-book {
+  height: 100vh;
+}
+.pick-book::before {
+  position: absolute;
+  content: "";
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  background-image: url(../imgs/Pick-Book-Section/pick-book.webp);
+  background-attachment: fixed;
+  background-size: cover;
+  filter: blur(10px);
+  z-index: -2;
+}
+.pick-book::after {
+  position: absolute;
+  content: "";
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+.pick-book .title-of-section {
+  font-size: 20px;
+  padding: 20px;
+}
+.pick-book .content {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 100%;
+}
+
+.pick-book .content .carousel {
+  position: relative;
+  overflow: hidden;
+  width: 300px;
+  z-index: 3;
+}
+.carousel .carousel-content .slide {
+  display: none;
+}
+.carousel .carousel-content .slide-show {
+  display: flex;
+  flex-direction: column;
+  justify-content: stretch;
+  align-items: center;
+}
+.carousel .carousel-content .slide > img {
+  width: 200px;
+  height: 305px;
+  border-radius: 20px;
+  margin-bottom: 20px;
+}
+.carousel .carousel-content .slide .price {
+  margin-bottom: 20px;
+  font-size: 20px;
+  color: white;
+}
+.carousel .carousel-content .slide > p {
+  color: var(--main-color);
+  font-size: 20px;
+  margin: 0px;
+  margin-bottom: 20px;
+}
+.carousel .carousel-control {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: absolute;
+  transform: translateY(-50%);
+  top: 50%;
+  width: 100%;
+}
+.carousel .carousel-control > .fa-solid {
+  color: var(--main-color);
+  transition: var(--transition);
+  border-radius: 50%;
+  padding: 5px;
+  cursor: pointer;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.carousel .carousel-control > .fa-angles-left {
+  margin-left: 2px;
+}
+.carousel .carousel-control > .fa-angles-right {
+  margin-right: 2px;
+}
+.carousel .carousel-control > .fa-solid:hover {
+  color: var(--main-color-alt);
+  background-color: rgba(0, 0, 0, 0.2);
+}
+.pick-book .content .order {
+  position: relative;
+}
+.pick-book .content .order > button {
+  background-color: var(--main-color);
+  transition: var(--transition);
+  border: none;
+  width: 200px;
+  height: 50px;
+  border-radius: 20px;
+  font-size: 23px;
+  cursor: pointer;
+  outline: none;
+  color: white;
+}
+.pick-book .content .order > button:hover {
+  background-color: var(--main-color-alt);
+}
+.pick-book .content .order .ordered {
+  position: absolute;
+  padding: var(--main-padding);
+  width: 200px;
+  border: 1px var(--main-color) solid;
+  color: white;
+  font-size: 15px;
+  text-align: center;
+  top: 60px;
+  transition: var(--transition);
+  opacity: 0;
+  z-index: 10;
+}
+.pick-book .content .order .ordered a {
+  font-size: 20px;
+  color: var(--main-color);
+  text-decoration: underline;
+}
+.pick-book .content .order .ordered.active {
+  transition: var(--transition);
+  opacity: 1;
+}
+.pick-book .content .order .ordered.unactive {
+  display: none;
+}
+.pick-book .content .order .ordered i {
+  color: var(--main-color);
+}
+@media (max-width: 768px) {
+  .pick-book .content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+  }
+  .pick-book {
+    height: auto;
+  }
+  .pick-book::before {
+    background-attachment: scroll;
+  }
+  .pick-book .content .order .ordered {
+    position: absolute;
+    padding: var(--main-padding);
+    width: 200px;
+    border: 1px var(--main-color) solid;
+    color: white;
+    font-size: 15px;
+    text-align: center;
+    top: -90px;
+    background-color: var(--main-color);
+    color: white;
+  }
+  .pick-book .content .order .ordered a {
+    color: white;
+  }
+  .pick-book .content .order .ordered i {
+    color: white;
+  }
+}
+/*? End Pick Book */
+/*? Start Most Read */
+.most-read > h2 {
+  color: var(--main-color-high-contrast);
+}
+.most-read .catag {
+  margin-bottom: var(--main-margin);
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: row;
+  align-items: center;
+}
+.most-read .catag > span {
+  transition: var(--transition);
+  border: 1px solid var(--main-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  width: 150px;
+  height: 50px;
+  font-size: 18px;
+  font-weight: 600;
+}
+.most-read .catag > span:not(:last-child) {
+  margin-right: var(--main-margin);
+}
+.most-read .catag > span:hover,
+.most-read .catag > span.active {
+  background-color: var(--main-color-alt);
+  border-color: var(--main-color-alt);
+  color: white;
+}
+.most-read .content .historical-fiction,
+.most-read .content .literary-fiction,
+.most-read .content .science-fiction {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  display: none;
+  gap: 40px;
+}
+.most-read .content .historical-fiction.active,
+.most-read .content .literary-fiction.active,
+.most-read .content .science-fiction.active {
+  display: flex;
+}
+.most-read .content .historical-fiction > div,
+.most-read .content .literary-fiction > div,
+.most-read .content .science-fiction > div {
+  display: flex;
+  justify-content: stretch;
+  align-items: stretch;
+  position: relative;
+  border: 2px solid var(--main-color);
+  overflow: hidden;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+.most-read .content .historical-fiction > div::before,
+.most-read .content .literary-fiction > div::before,
+.most-read .content .science-fiction > div::before {
+  transition: var(--transition);
+  position: absolute;
+  content: "";
+  left: 0px;
+  top: 0px;
+  height: 100%;
+  width: 50%;
+  z-index: 3;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+.most-read .content .historical-fiction > div:hover::before,
+.most-read .content .literary-fiction > div:hover::before,
+.most-read .content .science-fiction > div:hover::before {
+  left: -50%;
+}
+.most-read .content .historical-fiction > div::after,
+.most-read .content .literary-fiction > div::after,
+.most-read .content .science-fiction > div::after {
+  transition: var(--transition);
+  position: absolute;
+  content: "";
+  left: 50%;
+  top: 0px;
+  height: 100%;
+  width: 50%;
+  z-index: 3;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+.most-read .content .historical-fiction > div:hover::after,
+.most-read .content .literary-fiction > div:hover::after,
+.most-read .content .science-fiction > div:hover::after {
+  left: 100%;
+}
+.most-read .content .historical-fiction > div > img,
+.most-read .content .literary-fiction > div > img,
+.most-read .content .science-fiction > div > img {
+  width: 300px;
+  height: 100%;
+}
+.most-read .content .historical-fiction > div > span,
+.most-read .content .literary-fiction > div > span,
+.most-read .content .science-fiction > div > span {
+  transition: var(--transition);
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 150px;
+  height: 20px;
+  z-index: 2;
+  top: -65px;
+  right: -140px;
+  transform: rotate(40deg);
+  opacity: 0;
+  transition-delay: 0.2s;
+  color: white;
+}
+.most-read .content .historical-fiction > div > span {
+  background-color: #664228;
+}
+.most-read .content .literary-fiction > div > span {
+  background-color: rgb(29, 29, 29);
+}
+.most-read .content .science-fiction > div > span {
+  background-color: #5482e5;
+}
+.most-read .content .historical-fiction > div:hover span,
+.most-read .content .literary-fiction > div:hover span,
+.most-read .content .science-fiction > div:hover span {
+  opacity: 1;
+  right: -27px;
+  top: 30px;
+}
+.most-read > button {
+  margin-top: var(--main-margin);
+  background-color: rgb(37, 37, 37);
+  transition: var(--transition);
+  cursor: pointer;
+  outline: none;
+  border: none;
+  width: 200px;
+  height: 50px;
+  border-radius: 20px;
+  font-size: 23px;
+  color: white;
+}
+.most-read > button:hover {
+  background-color: var(--main-color-alt);
+}
+@media (max-width: 768px) {
+  .most-read .catag {
+    flex-direction: column;
+    width: 100%;
+  }
+  .most-read .catag > span:not(:last-child) {
+    margin-right: 0px;
+  }
+  .most-read .catag > span {
+    width: 100%;
+  }
+  .most-read .catag > span:not(:last-child) {
+    margin-bottom: var(--main-margin);
+  }
+  .most-read .content .historical-fiction,
+  .most-read .content .literary-fiction,
+  .most-read .content .science-fiction {
+    flex-direction: column;
+  }
+}
+/*? End Most Read */
+/*? Start Soon */
+.soon {
+  height: auto;
+}
+.soon h2 {
+  margin-bottom: 60px;
+}
+.soon::before {
+  content: "";
+  background-attachment: fixed;
+  background-size: cover;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  filter: blur(10px);
+  z-index: -2;
+  background-image: url(../imgs/Soon-Section/soon.webp);
+}
+.soon::after {
+  content: "";
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  background-color: rgba(0, 0, 0, 0.1);
+}
+.soon .soon-books {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+}
+.soon .soon-books .soon-book {
+  transition: 0.6s;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  align-items: center;
+  position: relative;
+  cursor: pointer;
+  user-select: none;
+  margin-bottom: 60px;
+  padding: 30px;
+  height: 310px;
+  width: 100%;
+}
+.soon .soon-books .soon-book.active {
+  height: 160px;
+  width: 600px;
+}
+.soon .soon-books .soon-book::before {
+  transition: var(--transition);
+  content: "";
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+  border-radius: 20px;
+  z-index: -1;
+  filter: blur(0px);
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.soon .soon-books .soon-book.active:hover::before {
+  filter: blur(0px);
+  background-color: rgba(0, 0, 0, 0.8);
+}
+.soon .soon-books .soon-book.active::before {
+  filter: blur(5px);
+  background-color: rgba(0, 0, 0, 0.8);
+}
+.soon .soon-books .soon-book::after {
+  content: "Soon!";
+  width: 100px;
+  height: 50px;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  background: rgb(200, 0, 0);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-top-right-radius: 20px;
+  opacity: 1;
+  transition: var(--transition);
+  transition-delay: 0.4s;
+  color: white;
+  font-size: 20px;
+}
+.soon .soon-books .soon-book.active::after {
+  opacity: 0;
+  transition-delay: 0s;
+}
+.soon .soon-books .soon-book img {
+  transition: var(--transition);
+  height: 250px;
+  margin-right: 20px;
+  border-radius: 10px;
+  transition-delay: var(--transition);
+}
+.soon .soon-books .soon-book.active img {
+  height: 100px;
+}
+.soon .soon-books .soon-book .book-name {
+  height: 60%;
+  margin-right: 20px;
+}
+
+.soon .soon-books .soon-book .book-name h3 {
+  color: var(--main-color);
+  transition: var(--transition);
+  position: static;
+  font-size: 30px;
+  transition-delay: var(--transition);
+}
+.soon .soon-books .soon-book .book-name h3::first-letter {
+  color: white;
+}
+.soon .soon-books .soon-book.active .book-name h3 {
+  position: absolute;
+  font-size: 20px;
+  transition-delay: 0s;
+}
+.soon .soon-books .soon-book .book-name p {
+  transition: var(--transition);
+  font-style: italic;
+  font-size: 20px;
+  font-weight: 600;
+  opacity: 1;
+  transition-delay: 0.6s;
+  color: white;
+}
+.soon .soon-books .soon-book.active .book-name p {
+  opacity: 0;
+  transition-delay: 0ms;
+  transition: 0s;
+}
+.soon .soon-books .soon-book .join {
+  transition: var(--transition);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  align-self: stretch;
+  transition-delay: var(--transition);
+}
+.soon .soon-books .soon-book.active .join {
+  transition-delay: 0s;
+}
+.soon .soon-books .soon-book .join > span {
+  transition: var(--transition);
+  border: 1px solid var(--main-color);
+  display: block;
+  border-radius: 25px;
+  padding: 20px;
+  font-size: 25px;
+  transition-delay: var(--transition);
+  margin-bottom: 2px;
+  color: white;
+}
+.soon .soon-books .soon-book.active .join > span {
+  padding: 15px;
+  font-size: 20px;
+  transition-delay: 0s;
+}
+.soon .soon-books .soon-book .join button {
+  transition: var(--transition);
+  background-color: transparent;
+  padding: 15px;
+  border: 1px solid var(--main-color);
+  border-radius: 15px;
+  width: 150px;
+  cursor: pointer;
+  opacity: 1;
+  transition-delay: 0s, 0.4s;
+  color: white;
+  font-size: 20px;
+  font-weight: 500;
+}
+.soon .soon-books .soon-book.active .join button {
+  display: none;
+}
+.soon .soon-books .soon-book .join button:hover {
+  background-color: var(--main-color);
+}
+.soon .soon-books .soon-book .join .pre-ordered {
+  transition: var(--transition);
+  padding: var(--main-padding);
+  background-color: var(--main-color-alt);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: absolute;
+  cursor: auto;
+  border: none;
+  width: 100%;
+  height: 100%;
+  z-index: 10;
+  border-radius: 10px;
+  font-size: 20px;
+  font-weight: 900;
+  opacity: 0;
+  -webkit-box-shadow: 0px 0px 50px 20px #ffffff;
+  box-shadow: 0px 0px 50px 20px #ffffff;
+  color: white;
+}
+.soon .soon-books .soon-book.active .join .pre-ordered {
+  font-size: 10px;
+  width: 200px;
+  right: -3px;
+  padding: 5px;
+}
+.soon .soon-books .soon-book .join .pre-ordered.active {
+  opacity: 1;
+  transition: var(--transition);
+}
+.soon .soon-books .soon-book .join .pre-ordered .title {
+  margin: 0px;
+}
+.soon .soon-books .soon-book.active .join .pre-ordered .title {
+  margin: 2px 0px;
+}
+.soon .soon-books .soon-book .join .pre-ordered .title::first-letter {
+  font-size: 30px;
+  color: red;
+}
+.soon .soon-books .soon-book .join .pre-ordered .has-been {
+  margin: 15px 0px;
+}
+.soon .soon-books .soon-book.active .join .pre-ordered .has-been {
+  margin: 2px 0px;
+}
+
+.soon .soon-books .soon-book .join .pre-ordered.unactive {
+  display: none;
+}
+.soon .soon-books .soon-book .join .pre-ordered .done {
+  position: absolute;
+  bottom: 30px;
+  right: 30px;
+  font-size: 30px;
+  color: rgb(0, 215, 0);
+  filter: drop-shadow(0px 0px 2px rgb(0, 215, 0));
+}
+.soon .soon-books .soon-book.active .join .pre-ordered .done {
+  font-size: 20px;
+  left: 25px;
+  top: 15px;
+}
+
+.soon .soon-books .soon-book .join .pre-ordered .close {
+  transition: var(--transition);
+  position: absolute;
+  cursor: pointer;
+  top: 2px;
+  right: 2px;
+  font-size: 25px;
+  color: #ff2d25;
+}
+.soon .soon-books .soon-book .join .pre-ordered .close:hover {
+  transform: rotate(360deg);
+  filter: drop-shadow(-2px 1px 1px #ff2d25);
+  color: white;
+}
+@media (max-width: 768px) {
+  .soon .soon-books .soon-book {
+    flex-direction: column;
+    padding: 20px;
+    min-height: 555px;
+    max-height: 601px;
+    height: 100%;
+  }
+  .soon .soon-books .soon-book.active {
+    min-height: 306px;
+    width: 250px;
+  }
+  .soon .soon-books .soon-book img {
+    height: 200px;
+    margin-right: 0px;
+    border-radius: 10px;
+    transition-delay: var(--transition);
+  }
+  .soon .soon-books .soon-book.active img {
+    height: 80px;
+  }
+  .soon .soon-books .soon-book .book-name {
+    text-align: center;
+    display: block;
+    margin-right: 0px;
+    width: 100%;
+  }
+  .soon .soon-books .soon-book.active .book-name {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .soon .soon-books .soon-book .join > span {
+    padding: var(--main-padding);
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+  .soon .soon-books .soon-book.active .join > span {
+    padding: var(--main-padding);
+  }
+  .soon .soon-books .soon-book .join button {
+    padding: var(--main-padding);
+    width: 150px;
+  }
+  .soon::before {
+    background-attachment: scroll;
+  }
+  .soon .soon-books .soon-book .join .pre-ordered {
+    height: 130%;
+    top: -30px;
+  }
+  .soon .soon-books .soon-book.active .join .pre-ordered {
+    width: 100%;
+    height: 160%;
+    right: 0px;
+  }
+  .soon .soon-books .soon-book .join .pre-ordered .done {
+    top: 10px;
+    right: 80px;
+  }
+  .soon .soon-books .soon-book.active .join .pre-ordered .done {
+    left: 125px;
+    top: 20px;
+  }
+}
+
+/*? End Soon */
+/*? Start Footer  */
+footer {
+  background-color: rgb(30, 30, 30);
+}
+.footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+}
+.footer p:first-child {
+  position: relative;
+  font-size: 20px;
+  font-weight: 600;
+}
+.footer p:first-child::before {
+  position: absolute;
+  content: "";
+  width: 200px;
+  height: 1px;
+  top: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: var(--main-color);
+}
+.footer .icons {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  width: 300px;
+}
+.footer .icons::before {
+  position: absolute;
+  content: "";
+  width: 7px;
+  height: 7px;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 107px;
+  border-radius: 50px;
+  background-color: white;
+}
+.footer .icons a {
+  font-size: 20px;
+}
+.footer .icons a:nth-child(1) {
+  color: white;
+}
+.footer .icons a:nth-child(2) {
+  color: white;
+}
+.footer .icons a:nth-child(3) {
+  color: #0e76a8;
+}
+.footer .icons a:nth-child(4) {
+  color: #8a3ab9;
+}
+.footer .icons a:nth-child(5) {
+  color: #4267b2;
+}
+.footer .icons a:nth-child(6) {
+  font-size: 20px;
+  color: white;
+  transition: var(--transition);
+}
+.footer .icons a:nth-child(6):hover {
+  color: var(--main-color);
+}
+.footer .love {
+  margin: 5px 0px;
+}
+.footer .love i {
+  color: red;
+}
+/*? End Footer  */

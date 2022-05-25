@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="PickBook website" />
+    <link rel="icon" href="imgs/icons8-book-64.png" />
+    <link rel="shortcut" href="imgs/icons8-book-64.png" />
+    <link rel="apple-touch-icon" href="imgs/icons8-book-64.png" />
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="stylesheet" href="css/all.min.css" />
+    <link rel="stylesheet" href="css/contact.css" />
+    <!-- Google fonts /Open sans/ -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <title>Contact Us</title>
+  </head>
+  <body>
+    <!--? Start Contact Us  -->
+    <section class="main-section contact">
+      <h2 class="title-of-section">Contact Us</h2>
+      <div class="content">
+        <div class="in-touch">
+          <div class="in-touch-header">
+            <h3>Let’s Get In Touch</h3>
+            <p>We Are Open Of Any Suggestion</p>
+          </div>
+          <div class="ways">
+            <div class="way phone">
+              <span><i class="fa-solid fa-phone"></i></span>
+              <div class="options numbers">
+                <span>+91123456789</span><span>+91987654321</span>
+              </div>
+            </div>
+            <div class="way mail">
+              <span><i class="fa-solid fa-envelope"></i></span>
+              <div class="options mails">
+                <span>pick.bookCom@gmail.com</span>
+              </div>
+            </div>
+            <div class="way location">
+              <span><i class="fa-solid fa-location-dot"></i></span>
+              <div class="options locations">
+                <span>India,Odisha</span><span>Bhubaneswar,Patia</span
+                ><span>KIIT Road</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="form">
+          <form
+            action="https://formspree.io/f/mgedljlj"
+            method="post"
+            id="my-form"
+          >
+            <div>
+              <label for="Name">Your Name :</label>
+              <input
+                type="text"
+                name="Name"
+                id="Name"
+                placeholder="Full Name"
+              />
+              <label for="Email">Your E-mail :</label>
+              <input
+                type="mail"
+                name="Email"
+                id="Email"
+                placeholder="E-mail Id"
+              />
+            </div>
+            <label for="Message">Your Message :</label>
+            <textarea
+              name="Message"
+              id="Message"
+              cols="30"
+              rows="10"
+              placeholder="Your Message"
+            ></textarea>
+            <div>
+              <button type="submit">Submit Your Message!</button>
+            </div>
+          </form>
+          <div class="status" id="my-form-status">
+            Your submission status will appear here
+          </div>
+        </div>
+      </div>
+      <div class="formspree">
+        <a
+          href="https://formspree.io/forms/mgedljlj/submissions"
+          target="_blank"
+          >Click here To Test The Submission Form</a
+        >
+        <p>
+          Email ID And Password Attached In
+          <a href="Notes/help.txt" target="_blank">Help.txt</a>
+        </p>
+      </div>
+    </section>
+    <!--? End Contact Us  -->
+    <!--? Start Footer -->
+    <footer id="footer">
+      <div class="container footer">
+        <p>We Are Social</p>
+        <div class="icons">
+          <a aria-label="github" href="https://github.com/">
+            <i class="fa-brands fa-github"></i></a
+          ><a aria-label="Codepen" href="https://codepen.io/"
+            ><i class="fa-brands fa-codepen"></i></a
+          ><a aria-label="LinkediN" href="https://www.linkedin.com/">
+            <i class="fa-brands fa-linkedin"></i></a
+          ><a aria-label="instagram" href="https://www.instagram.com/">
+            <i class="fa-brands fa-instagram"></i
+          ></a>
+          <a href="index.html"><span>Home</span></a>
+        </div>
+        <p class="copy">
+          CopyRight <i class="fa-regular fa-copyright"></i> 2022
+        </p>
+        <p class="love">Coded With <i class="fa-solid fa-heart"></i></p>
+      </div>
+    </footer>
+    <!--? End Footer -->
+    <script src="js/contact.js"></script>
+  </body>
+</html>
